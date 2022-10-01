@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+// LOGIN PAGE
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+
+  img {
+    max-width: 50%;
+  }
+  a {
+    text-decoration: none;
+    background-color: #1ed760;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+}
+
+// NAVBAR
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 5px 0;
+
+  .logo {
+    img {
+      width: 40px;
+    }
+  }
+
+  .search {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-evenly;
+
+    .home {
+      width: 50px;
+      height: 50px;
+      background-color: #242424;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        margin: 9px 10px;
+      }
+
+      &:hover {
+        background-color: #343434;
+      }
+    }
+
+    .searchBar {
+      display: flex;
+      align-items: center;
+      background-color: #242424;
+      padding: 10px;
+      border-radius: 30px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #343434;
+
+        input {
+          background-color: #343434;
+        }
+      }
+
+      img {
+        width: 30px;
+      }
+
+      input {
+        border: none;
+        width: 20vw;
+        background-color: #242424;
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0 10px;
+        cursor: pointer;
+        letter-spacing: 1px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 10%;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 3px 15px;
+      border-radius: 20px;
+      font-weight: 500;
+      transition: all 0.1s;
+
+      &:hover {
+        transform: scale(1.001);
+        border: 2px solid #ffffff;
+      }
+    }
+    button {
+      border: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+
+      img {
+        width: 45px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+// SIDEBAR
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 5px;
+  background-color: #121212;
+  width: 15%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  .top {
+    position: absolute;
+    top: 0;
+    background-color: #121212;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    a {
+      color: #95a4af;
+      text-decoration: none;
+      transition: all 0.1s;
+
+      &:hover {
+        color: #ffffff;
+        transform: scale(1.001);
+      }
+    }
+  }
+
+  .playlists {
+    display: flex;
+    flex-direction: column;
+    margin-top: 210px;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    a {
+      color: #95a4af;
+      text-decoration: none;
+      transition: all 0.1s;
+      margin: 5px 3px;
+      font-size: 12.5px;
+
+      &:hover {
+        color: #ffffff;
+        transform: scale(1.001);
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #5a5a5a;
+    }
+  }
+}
+
+// PLAYBACK BAR
+.playback {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+
+    #like {
+      width: 20px;
+      cursor: pointer;
+    }
+
+    #songCover {
+      cursor: pointer;
+    }
+
+    .details {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 12px;
+        margin: 0 5px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      #songName {
+        font-weight: 700;
+      }
+
+      .artists {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .controls {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      img {
+        width: 30px;
+        cursor: pointer;
+      }
+
+      #pause {
+        width: 40px;
+      }
+    }
+
+    .progressBar {
+      margin-top: 10px;
+      background-color: #4d4d4d;
+    }
+  }
+
+  .volume {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+
+    img {
+      width: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+// MAIN
+.main {
+  position: fixed;
+  left: 16%;
+  top: 70px;
+  width: 83%;
+  height: 85%;
+  background-color: #121212;
+  border-radius: 10px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #5a5a5a;
+  }
+
+  h3 {
+    margin: 10px;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+// CARD
+.card {
+  margin: 20px;
+  height: 250px;
+  width: 200px;
+  background-color: #181818;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #2a2a2a;
+  }
+
+  img {
+    width: 180px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  h5 {
+    margin-left: 10px;
+  }
+
+  .artists {
+    margin-left: 10px;
+    display: flex;
+
+    p {
+      margin-right: 5px;
+      font-size: 10px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
